@@ -9,7 +9,10 @@ import Browse from "./pages/Browse";
 import HowItWorks from "./pages/HowItWorks";
 import About from "./pages/About";
 import DogProfile from "./pages/DogProfile";
-import { BreedingRequests, HealthRecords, Matches, Messages, Support, Privacy, Terms } from "./pages/ComingSoon";
+import Messages from "./pages/Messages";
+import Matches from "./pages/Matches";
+import HealthRecords from "./pages/HealthRecords";
+import { BreedingRequests, Support, Privacy, Terms } from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

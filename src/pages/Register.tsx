@@ -84,13 +84,13 @@ export default function Register() {
 
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Dog Information */}
-            <Card className="shadow-warm">
+            <Card className="shadow-float animate-scale-in">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">Dog Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  <div className="animate-fade-in">
                     <Label htmlFor="dogName">Dog Name *</Label>
                     <Input
                       id="dogName"
@@ -98,6 +98,7 @@ export default function Register() {
                       onChange={(e) => handleInputChange("dogName", e.target.value)}
                       placeholder="Enter your dog's name"
                       required
+                      className="transition-bounce focus:shadow-card"
                     />
                   </div>
                   <div>
@@ -214,7 +215,7 @@ export default function Register() {
             </Card>
 
             {/* Owner Information */}
-            <Card className="shadow-warm">
+            <Card className="shadow-float animate-scale-in delay-200">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">Owner Information</CardTitle>
               </CardHeader>
@@ -309,7 +310,7 @@ export default function Register() {
             </Card>
 
             {/* File Upload */}
-            <Card className="shadow-warm">
+            <Card className="shadow-float animate-scale-in delay-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">Photos & Documents</CardTitle>
                 <p className="text-muted-foreground">
@@ -329,13 +330,13 @@ export default function Register() {
             </Card>
 
             {/* Submit Button */}
-            <div className="text-center">
+            <div className="text-center animate-fade-in delay-500">
               <Button
                 type="submit"
                 size="lg"
-                className="bg-gradient-hero text-primary-foreground px-12 py-4 text-lg hover:shadow-warm transition-all duration-300"
+                className="bg-gradient-hero text-primary-foreground px-12 py-4 text-lg hover:shadow-float transition-bounce group"
               >
-                Register My Dog
+                <span className="group-hover:scale-105 transition-transform">Register My Dog</span>
               </Button>
             </div>
           </form>

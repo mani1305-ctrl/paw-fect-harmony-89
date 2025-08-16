@@ -100,19 +100,20 @@ export default function Browse() {
 
           {/* Dogs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredDogs.map((dog) => (
-              <Card key={dog.id} className="group hover:shadow-warm transition-all duration-300 overflow-hidden">
+            {filteredDogs.map((dog, index) => (
+              <Card key={dog.id} className="group hover:shadow-float transition-bounce overflow-hidden animate-scale-in" style={{ animationDelay: `${index * 150}ms` }}>
                 <div className="relative">
                   <img 
                     src={dog.photo} 
                     alt={dog.name}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-primary text-primary-foreground">
+                    <Badge className="bg-gradient-hero text-primary-foreground animate-pulse-glow">
                       {dog.price}
                     </Badge>
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
                 <CardContent className="p-6">
@@ -155,10 +156,10 @@ export default function Browse() {
                     
                     <Button 
                       size="sm"
-                      className="bg-gradient-hero text-primary-foreground hover:shadow-warm transition-all duration-300"
+                      className="bg-gradient-hero text-primary-foreground hover:shadow-float transition-bounce group"
                       onClick={() => navigate(`/dog/${dog.id}`)}
                     >
-                      View Profile
+                      <span className="group-hover:scale-105 transition-transform">View Profile</span>
                     </Button>
                   </div>
                 </CardContent>

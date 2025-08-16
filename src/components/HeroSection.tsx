@@ -17,28 +17,28 @@ export default function HeroSection() {
       </div>
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in">
           Find the Perfect
-          <span className="block text-primary">Match for Your Dog</span>
+          <span className="block text-primary animate-pulse-glow">Match for Your Dog</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up">
           Connect with responsible breeders and find the ideal breeding partner for your beloved companion. Safe, verified, and professional.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
           <Button 
             size="lg"
-            className="bg-gradient-hero text-primary-foreground px-8 py-4 text-lg hover:shadow-warm transition-all duration-300"
+            className="bg-gradient-hero text-primary-foreground px-8 py-4 text-lg hover:shadow-float transition-bounce group"
             onClick={() => navigate("/register")}
           >
-            Register Your Dog
+            <span className="group-hover:scale-105 transition-transform">Register Your Dog</span>
           </Button>
           
           <Button 
             variant="outline"
             size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg transition-all duration-300"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg transition-bounce hover:shadow-card"
             onClick={() => navigate("/browse")}
           >
             Browse Dogs
@@ -46,16 +46,16 @@ export default function HeroSection() {
         </div>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">1000+</div>
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:shadow-float transition-bounce animate-fade-in delay-300">
+            <div className="text-3xl font-bold text-primary mb-2 animate-float">1000+</div>
             <div className="text-muted-foreground">Registered Dogs</div>
           </div>
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">500+</div>
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:shadow-float transition-bounce animate-fade-in delay-500">
+            <div className="text-3xl font-bold text-primary mb-2 animate-float">500+</div>
             <div className="text-muted-foreground">Successful Matches</div>
           </div>
-          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">50+</div>
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:shadow-float transition-bounce animate-fade-in delay-700">
+            <div className="text-3xl font-bold text-primary mb-2 animate-float">50+</div>
             <div className="text-muted-foreground">Dog Breeds</div>
           </div>
         </div>
